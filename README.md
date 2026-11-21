@@ -7,7 +7,9 @@
 > [`xob0t/gotohp`](https://github.com/xob0t/gotohp) --- không cần máy
 > ảo, trình giả lập Android, Windows Subsystem for Android (WSA) hoặc
 > WSL.
-
+<p align="center">
+  <img src="reddit_showcase.jpg" alt="GoogleUnlimited Showcase" width="100%" />
+</p>
 ------------------------------------------------------------------------
 
 ## Mục lục
