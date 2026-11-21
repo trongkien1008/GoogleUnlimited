@@ -120,28 +120,13 @@ sao lưu theo cơ chế áp dụng cho Pixel trong Google Photos.
 
 ### Yêu cầu theo nền tảng
 
-  ------------------------------------------------------------------------------------------------
-  Nền tảng       Phiên bản hệ    Môi trường     Phụ thuộc bắt buộc Cách cài đặt phụ thuộc
-                 điều hành /     chạy và shell                     
-                 Kiến trúc                                         
-  -------------- --------------- -------------- ------------------ -------------------------------
-  **Windows**    Windows 10 / 11 PowerShell 5.1 Module `PSSQLite`  Được đóng gói trong
-                 (64-bit)        hoặc                              `Modules/PSSQLite/`; tự cài từ
-                                 PowerShell 7+                     PowerShell Gallery nếu thiếu
-                                 (`pwsh`)                          
+| Nền tảng | OS Version / Arch | Runtime & Shell | Required Dependencies | Dependency Installation |
+| :--- | :--- | :--- | :--- | :--- |
+| **Windows** | Windows 10 / 11 (64-bit) | PowerShell 5.1 or PowerShell 7+ (`pwsh`) | `PSSQLite` module | Bundled in `Modules/PSSQLite/`; auto-installs via PowerShell Gallery if missing |
+| **macOS** | macOS 11 (Big Sur)+<br>Apple Silicon (M1–M4) & Intel x64 | Bash | `fswatch`, `sqlite3`, `curl` | Auto-installed via Homebrew during `./google-unlimited.sh setup` |
+| **Linux** | Modern Linux distributions<br>x86_64 or aarch64/arm64 | Bash | `inotify-tools`, `sqlite3`, `curl` | Auto-installed via `apt`, `dnf`, `pacman`, or `zypper` during `./google-unlimited.sh setup` |
 
-  **macOS**      macOS 11 (Big   Bash           `fswatch`,         Tự cài bằng Homebrew khi chạy
-                 Sur) trở lên;                  `sqlite3`, `curl`  `./google-unlimited.sh setup`
-                 Apple Silicon                                     
-                 (M1--M4) và                                       
-                 Intel x64                                         
-
-  **Linux**      Các bản phân    Bash           `inotify-tools`,   Tự cài bằng `apt`, `dnf`,
-                 phối Linux hiện                `sqlite3`, `curl`  `pacman` hoặc `zypper` khi chạy
-                 đại; x86_64                                       `./google-unlimited.sh setup`
-                 hoặc                                              
-                 aarch64/arm64                                     
-  ------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ### Các tệp thực thi có sẵn trong kho mã nguồn
 
